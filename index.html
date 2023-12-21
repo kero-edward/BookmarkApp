@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Kero Edward">
+    <meta name="keywords" content="site, bookmark, save, favorite">
+    <meta name="description"
+        content="Bookmark App that you to bookmark your favorite site by enter site name and its valid url. also you can update, delete, and search for your bookmarks.">
+    <link rel="shortcut icon" href="./assets/images/icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="./assets/css/all.min.css">
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Lobster+Two&family=Ubuntu+Mono&display=swap" rel="stylesheet">
+    <title>Bookmark App</title>
+</head>
+
+<body>
+    <section class="mainSection py-5">
+
+        <div class="overlay"></div>
+
+        <div class="bookmarkSection">
+
+            <h1 class="text-capitalize">bookmark app</h1>
+            <h2 class="text-capitalize text-white mt-5">
+                <i class="fa-solid fa-bookmark"></i>
+                bookmark your favorite sites
+            </h2>
+
+            <div class="bookmarkForm mt-5">
+                <label for="bookmarkName" class="text-capitalize mb-2 text-white">
+                    <i class="fa-solid fa-book-bookmark"></i>
+                    bookmark site name
+                </label>
+                <input id="bookmarkName" class="form-control mb-5" type="text" placeholder="Bookmark Name"
+                    aria-label="Bookmark site name input">
+
+                <label for="bookmarkUrl" class="text-capitalize mb-2 text-white">
+                    <i class="fa-solid fa-link"></i>
+                    bookmark site <span class="text-uppercase"> url </span>
+                </label>
+                <input id="bookmarkUrl" class="form-control mb-5" type="text" placeholder="Bookmark Name"
+                    aria-label="Bookmark site url input">
+
+                <button id="buttonNameChange" type="button" class="btn text-capitalize" onclick="addOrUpdateBookmark('add', true)">add</button>
+            </div>
+
+            <div class="bookmarkTable mt-5 table-responsive">
+
+                <input id="bookmarkSearch" class="form-control mb-3" onkeyup="searchBookmark(this.value)" type="text" placeholder="Bookmark Name Search..."
+                    aria-label="Bookmark site name search input">
+
+                <table class="table table-success table-striped text-center">
+                    <thead>
+                        <tr class="text-capitalize">
+                            <th scope="col">site name</th>
+                            <th scope="col">site <span class="text-uppercase">url</span></th>
+                            <th scope="col">update</th>
+                            <th scope="col">delete</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tableBody">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <script src="./assets/js/bootstrap.bundle.min.js"></script>
+    <script src="./assets/js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,142 @@
+:root {
+    --titleFontFamily: 'Lobster Two', sans-serif;
+    --bodyFontFamily: 'Ubuntu Mono', monospace;
+    --mainColor: #157EFB;
+}
+
+.mainSection {
+    background-image: url('../images/866545228_max.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    position: relative;
+
+}
+
+.mainSection .overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.bookmarkSection {
+    position: relative;
+    z-index: 2;
+    width: 75%;
+    margin: auto;
+}
+
+.bookmarkSection h1 {
+    font-family: var(--titleFontFamily);
+    color: #fff;
+    font-size: 3.5vw;
+    text-align: center;
+    position: relative;
+}
+
+.bookmarkSection h1::after {
+    content: "";
+    background-color: var(--mainColor);
+    height: 5px;
+    width: 10%;
+    position: absolute;
+    top: 110%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.bookmarkSection h2 {
+    font-family: var(--bodyFontFamily);
+    position: relative;
+    font-size: 2vw;
+    width: fit-content;
+}
+
+.bookmarkSection h2 i {
+    color: var(--mainColor);
+    font-size: 1.5vw;
+}
+
+.bookmarkSection h2::after {
+    content: "";
+    background-color: var(--mainColor);
+    height: 5px;
+    width: 25%;
+    position: absolute;
+    top: 120%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.bookmarkForm {
+    font-family: var(--bodyFontFamily);
+}
+
+.bookmarkForm label {
+    font-size: 1.3vw;
+}
+
+.bookmarkForm label i {
+    color: var(--mainColor);
+}
+
+.bookmarkForm input,
+.bookmarkTable input {
+    width: 40%;
+}
+
+.bookmarkForm button {
+    border: 3px solid var(--mainColor);
+    color: var(--mainColor);
+    transition: 0.4s all ease-in-out;
+    -webkit-transition: 0.4s all ease-in-out;
+    -moz-transition: 0.4s all ease-in-out;
+    -ms-transition: 0.4s all ease-in-out;
+    -o-transition: 0.4s all ease-in-out;
+    font-size: 1.2vw;
+    font-weight: 700;
+}
+
+.bookmarkForm button:hover {
+    background-color: var(--mainColor);
+    color: #fff;
+}
+
+.bookmarkTable {
+    font-family: var(--bodyFontFamily);
+}
+
+.bookmarkTable tbody a {
+    color: var(--mainColor);
+}
+
+@media screen and (max-width: 500px) {
+    .bookmarkSection h1 {
+        font-size: 5vw;
+    }
+
+    .bookmarkSection h2 {
+        font-size: 3vw;
+    }
+
+    .bookmarkSection h2 i {
+        font-size: 2.5vw;
+    }
+
+    .bookmarkForm label {
+        font-size: 3vw;
+    }
+
+    .bookmarkFoinput,
+    .bookmarkTable input {
+        width: 65%;
+    }
+
+    .bookmarkForm button {
+        font-size: 2.5vw;
+    }
+}
